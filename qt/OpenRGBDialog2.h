@@ -5,6 +5,7 @@
 
 #include <vector>
 #include "i2c_smbus.h"
+#include "FanController.h"
 #include "RGBController.h"
 #include "ProfileManager.h"
 #include "NetworkServer.h"
@@ -24,7 +25,7 @@ class Ui::OpenRGBDialog2 : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit OpenRGBDialog2(std::vector<i2c_smbus_interface *>& bus, std::vector<RGBController *>& control, ProfileManager* manager, NetworkServer* server, bool show_i2c_tools, QWidget *parent = 0);
+    explicit OpenRGBDialog2(std::vector<i2c_smbus_interface *>& bus, std::vector<RGBController *>& control, std::vector<FanController *>& fancontrol, ProfileManager* manager, NetworkServer* server, bool show_i2c_tools, QWidget *parent = 0);
     ~OpenRGBDialog2();
 
     void show();
@@ -33,6 +34,7 @@ public:
 protected:
     std::vector<i2c_smbus_interface *>& busses;
     std::vector<RGBController *>&       controllers;
+    std::vector<FanController *>&       fan_controllers;
     ProfileManager*                     profile_manager;
     NetworkServer*                      network_server;
 

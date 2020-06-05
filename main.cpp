@@ -9,6 +9,7 @@
 #include "NetworkServer.h"
 #include "OpenRGB.h"
 #include "ProfileManager.h"
+#include "FanController.h"
 #include "RGBController.h"
 #include "i2c_smbus.h"
 #include <vector>
@@ -20,6 +21,7 @@
 
 extern std::vector<i2c_smbus_interface*> busses;
 extern std::vector<RGBController*> rgb_controllers;
+extern std::vector<FanController*> fan_controllers;
 
 // See cli.cpp
 extern unsigned int cli_main(int argc, char *argv[], std::vector<RGBController *> rgb_controllers_in, ProfileManager* profile_manager_in);
@@ -63,7 +65,7 @@ int main(int argc, char* argv[])
     QApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication a(argc, argv);
 
-    Ui::OpenRGBDialog2 dlg(busses, rgb_controllers, &profile_manager, &server, show_i2c_tools);
+    Ui::OpenRGBDialog2 dlg(busses, rgb_controllers, fan_controllers, &profile_manager, &server, show_i2c_tools);
     dlg.show();
 
     return a.exec();
