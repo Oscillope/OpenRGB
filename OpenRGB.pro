@@ -79,6 +79,7 @@ INCLUDEPATH +=                                                          \
     Controllers/RGBFusion2USBController/                                \
     Controllers/RGBFusionGPUController/                                 \
     Controllers/SteelSeriesController/                                  \
+    Controllers/SoundblasterXController/                                \
     Controllers/ThermaltakeRiingController/                             \
     RGBController/                                                      \
     qt/
@@ -139,6 +140,7 @@ HEADERS +=                                                              \
     Controllers/RGBFusionGPUController/RGBFusionGPUController.h         \
     Controllers/RedragonController/RedragonK556Controller.h             \
     Controllers/RedragonController/RedragonM711Controller.h             \
+    Controllers/SoundblasterXController/SoundblasterXController.h       \
     Controllers/SteelSeriesController/SteelSeriesRivalController.h      \
     Controllers/ThermaltakeRiingController/ThermaltakeRiingController.h \
     RGBController/RGBController.h                                       \
@@ -178,6 +180,7 @@ HEADERS +=                                                              \
     RGBController/RGBController_RGBFusion2SMBus.h                       \
     RGBController/RGBController_RGBFusion2USB.h                         \
     RGBController/RGBController_RGBFusionGPU.h                          \
+    RGBController/RGBController_SoundblasterX.h                         \
     RGBController/RGBController_SteelSeriesRival.h                      \
     RGBController/RGBController_ThermaltakeRiing.h                      \
 
@@ -272,6 +275,8 @@ SOURCES +=                                                              \
     Controllers/RedragonController/RedragonK556Controller.cpp           \
     Controllers/RedragonController/RedragonM711Controller.cpp           \
     Controllers/RedragonController/RedragonControllerDetect.cpp         \
+    Controllers/SoundblasterXController/SoundblasterXController.cpp     \
+    Controllers/SoundblasterXController/SoundblasterXControllerDetect.cpp \
     Controllers/SteelSeriesController/SteelSeriesRivalController.cpp    \
     Controllers/SteelSeriesController/SteelSeriesControllerDetect.cpp   \
     Controllers/ThermaltakeRiingController/ThermaltakeRiingController.cpp \
@@ -315,6 +320,7 @@ SOURCES +=                                                              \
     RGBController/RGBController_RGBFusion2SMBus.cpp                     \
     RGBController/RGBController_RGBFusion2USB.cpp                       \
     RGBController/RGBController_RGBFusionGPU.cpp                        \
+    RGBController/RGBController_SoundblasterX.cpp                       \
     RGBController/RGBController_SteelSeriesRival.cpp                    \
     RGBController/RGBController_ThermaltakeRiing.cpp                    \
 
